@@ -54,6 +54,9 @@
                                  success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
                                  failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure;
 
+- (NSURLSessionDataTask *_Nonnull)PUT:(NSString *_Nonnull)URLString parameters:(nullable id)parameters success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
+                              failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure;
+
 - (void)setHeaderPara:(NSDictionary *_Nonnull)paras;
 
 @end

@@ -163,6 +163,24 @@ constructingBodyWithBlock:block
                  failure:failure];
 }
 
+- (NSURLSessionDataTask *_Nonnull)PUT:(NSString *_Nonnull)URLString
+                           parameters:(nullable id)parameters
+                              success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
+                              failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
+    self.httpRequestHeaders = FORMAT(@"HTTPRequestHeaders--%@", [_rqMg.requestSerializer HTTPRequestHeaders]);
+    self.requestUrlAndparameters = FORMAT(@"PUT RQT--%@\n paras:%@", URLString, parameters);
+    [YunLogHelper logMsg:self.requestUrlAndparameters
+                   force:YunRqtConfig.instance.logUrl];
+    
+    self.url = URLString;
+    self.parameters = parameters;
+    
+    return [_rqMg PUT:URLString
+              parameters:parameters
+                 success:success
+                 failure:failure];
+}
+
 - (void)setHeaderPara:(NSDictionary *)paras {
     if (paras == nil || paras.count == 0) {return;}
 
