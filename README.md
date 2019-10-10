@@ -2,7 +2,7 @@
 
 YunBaseApp是自己在开发iOS应用的过程中，积累形成的基本开发框架。其中涉及开发App中等各种功能：UIViewController 的封装、主题管理、帐号管理、日志管理、、加载页、提示信息、错误封装等。
 
-支持的平台: iOS 9.0 and later
+支持的平台: iOS 9.0 and later  
 
 ## 需要的组件
 
