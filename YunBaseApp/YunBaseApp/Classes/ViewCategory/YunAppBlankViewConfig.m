@@ -33,7 +33,6 @@
         _nagItemIconH = 30;
         _nagItemIconNorH = YunAppTheme.nagFontTitle.lineHeight - 2;
 
-        _defNagBackItemImg = @"nag_back";
     }
 
     return self;

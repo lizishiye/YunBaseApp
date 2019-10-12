@@ -6,6 +6,7 @@
 #import <YunKits/YunSizeHelper.h>
 #import "YunAppViewController+Nag.h"
 #import "YunAppBlankViewConfig.h"
+#import <YunConfig.h>
 
 @implementation YunAppViewController (Nag)
 
@@ -77,7 +78,7 @@
 }
 
 - (void)setNagBackItem {
-    [self setNagItemIsLeft:YES imgName:YunAppBlankViewConfig.instance.defNagBackItemImg];
+    [self setNagItemIsLeft:YES imgName:YunConfig.instance.defNagBackItemImg];
 }
 
 - (NSString *)imgByNagType:(NSInteger)type {
