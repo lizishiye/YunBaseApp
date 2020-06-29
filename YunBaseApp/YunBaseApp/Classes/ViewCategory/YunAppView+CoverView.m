@@ -56,7 +56,7 @@
 }
 
 - (YunCoverView *)getErrCtnView {
-    YunCoverView *view = (YunCoverView *) self.noCtnView;
+    YunCoverView *view = (YunCoverView *) self.errCtnView;
     if (view == nil) {
         view = [YunCoverView itemWithMsg:@"网络错误，请检查您的网络后重试！"
                                      img:YunConfig.instance.imgViewNoNetName
@@ -80,7 +80,7 @@
             view = [self.curDelegate didGetErrCtnCoverView:view];
         }
         
-        self.noCtnView = view;
+        self.errCtnView = view;
     }
     
     return view;

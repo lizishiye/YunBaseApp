@@ -29,6 +29,8 @@
 
 @property (nonatomic, copy) NSString *noCtnMsg;
 
+@property (nonatomic, strong) YunView *errCtnView;
+
 @property (nonatomic, strong) YunView *noNetView;
 
 @property (nonatomic, strong) YunView *stateView;
